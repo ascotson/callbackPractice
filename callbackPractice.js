@@ -118,9 +118,15 @@ each(names, function(item, indice){
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
 
 var getUserById = function(users, id, idFunc) {
-    var user = users[2];
-    idFunc(user);
+  for (var i = 0; i < users.length; i++) {
+    if (users[i].id === id) {
+        idFunc(users[i]);
+      }
+    }
 };
+//     var user = users[2];
+//     idFunc(user);
+// };
 
 var users = [
   {
